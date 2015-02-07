@@ -1,2 +1,2 @@
 #!/bin/bash
-java anagram $*
+java Anagram $*
