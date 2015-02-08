@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+package gnana;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,10 +17,14 @@ public class palindrome
 {
     public static void main(String args[]) throws IOException
     {
-        String original, reverse = "";
-        InputStreamReader input = new InputStreamReader(System.in);
-        BufferedReader reader = new BufferedReader(input);        
-        original = reader.readLine();
+        String original="", reverse = "";
+        //InputStreamReader input = new InputStreamReader(System.in);
+        //BufferedReader reader = new BufferedReader(input);        
+        //original = reader.readLine();
+        for(int r=0;r<args.length;r++)
+        {        
+            original+=args[r];
+        }
         original=original.toLowerCase();
         original=original.replaceAll("[^a-zA-Z]+","");
         int length = original.length();
