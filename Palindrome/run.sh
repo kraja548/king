@@ -1,2 +1,2 @@
 #!/bin/bash
-java main $*
+java palindrome $*
