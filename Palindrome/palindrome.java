@@ -1,41 +1,28 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package gnana;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+//import java.io.BufferedReader;
+//import java.io.FileReader;
+//import java.util.Scanner;
 
-/**
- *
- * @author admn
- */
-public class Palindrome 
-{
-    public static void main(String[] args) throws IOException
-    {
-        String original="", reverse = "";
-        //InputStreamReader input = new InputStreamReader(System.in);
-        //BufferedReader reader = new BufferedReader(input);        
-        //original = reader.readLine();
-        for(int r=0;r<args.length;r++)
-        {        
-            original+=args[r];
-        }
-        original=original.toLowerCase();
-        original=original.replaceAll("[^a-zA-Z]+","");
-        int length = original.length();
-        for ( int i = length - 1; i >= 0; i-- )
-        reverse = reverse + original.charAt(i);
-        if (original.equals(reverse))
-            System.out.print("yes");
-        else
-         System.out.print("no");
-    }
-    
-            
-            
+public class Palindrome {
+
+	public static void main(String[] args) {
+		
+		String ip="";
+		for(int r=0;r<args.length;r++)
+			ip+=args[i];
+		input = input.replaceAll("[^a-zA-Z]+","").toLowerCase();
+		char[] array=input.toCharArray();
+		int isPalindrome=1;
+		for(int i=0,j=array.length-1;i<j;i++,j--)
+		{
+			if(array[i]!=array[j])
+				isPalindrome=0;
+		}
+		if(isPalindrome)
+			System.out.println("Yes");
+		else
+			System.out.println("No");
+	}
+
 }
