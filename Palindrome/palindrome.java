@@ -15,9 +15,12 @@ import java.io.InputStreamReader;
  */
 public class Palindrome 
 {
-    public static void main(String args[]) throws IOException
+    public static void main(String[] args) throws IOException
     {
-        String original="", reverse = "";        
+        String original="", reverse = "";
+        //InputStreamReader input = new InputStreamReader(System.in);
+        //BufferedReader reader = new BufferedReader(input);        
+        //original = reader.readLine();
         for(int r=0;r<args.length;r++)
         {        
             original+=args[r];
