@@ -20,9 +20,9 @@ public class Palindrome {
 				isPalindrome=0;
 		}
 		if(isPalindrome==1)
-			System.out.println("Yes");
+			System.out.println("yes");
 		else
-			System.out.println("No");
+			System.out.println("no");
 	}
 
 }
