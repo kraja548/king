@@ -27,9 +27,9 @@ public class palindrome
         for ( int i = length - 1; i >= 0; i-- )
         reverse = reverse + original.charAt(i);
         if (original.equals(reverse))
-            System.out.println("YES");
+            System.out.println("Yes");
         else
-         System.out.println("NO");
+         System.out.println("No");
     }
             
             
