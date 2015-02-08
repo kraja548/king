@@ -43,16 +43,18 @@ public class anagram
                 {
                     word = word.replace(word.substring(word.length()-1), "");                    
                 }                
-                if(word.length()>3){
-                String sort=alfabetOrder(word);
-                ArrayList<String> anagram=allText.get(sort);
-                if(anagram==null)
-                    anagram=new ArrayList<String>();               
-                
-                if(!anagram.contains(word))
-                    anagram.add(word);
-                            
-                    allText.put(sort, anagram);
+                if(word.length()>3)
+                {
+                    String sort=alfabetOrder(word);
+                    ArrayList<String> anagram=allText.get(sort);
+                    if(anagram==null)
+                        anagram=new ArrayList<String>();               
+
+                    if(!anagram.contains(word))
+                    {
+                        anagram.add(word);
+                    }           
+                        allText.put(sort, anagram);
                 }
                
                 
@@ -63,10 +65,23 @@ public class anagram
         {
             String allwords;
             allwords = allText.get(key).toString();
-            String delim="[, ]";
-            String[] tokens=allwords.split(delim);
+            String delim="[ ]";
+            String[] tokens=allwords.split(delim);            
             if(tokens.length>1)
-                System.out.println(allText.get(key));                       
+            {
+                Arrays.sort(tokens);
+                //System.out.println(allText.get(key));
+                for(int k=0;k<tokens.length;k++)
+                {
+                    tokens[k]=tokens[k].replaceAll("[^a-zA-Z]+","");
+                    System.out.print(tokens[k]);
+                    if(k!=tokens.length-1)
+                        System.out.print(",");
+                }
+                System.out.println();
+            }
+            
+            
         }  
     }
     static String alfabetOrder(String str)
