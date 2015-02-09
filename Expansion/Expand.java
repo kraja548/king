@@ -10,6 +10,7 @@ import java.util.Scanner;
 /**
  *
  * @author RAJA
+ * @Website http://rajtechnos.blogspot.in/
  */
 public class Expand 
 {
